@@ -1,0 +1,9 @@
+n = 1
+def born(moth):
+    if moth >= 3:
+        return born(moth-2)+born(moth-1)
+    else:
+        return 1
+
+c = born(int(input()))
+print(c)

@@ -1,0 +1,8 @@
+#153 = 1的立方+3的立方+5的立方
+for x in range(1,10):  #遍历x的取值（1-9）
+    for y in range(0,10): #遍历y的取值（0-9）
+        for z in range(0,10): #遍历z的取值（0-9）
+            s1=x*100+y*10+z    #s1的表示
+            s2= x**3 + y**3 + z**3   #或者s2=pow(x,3)+pow(y,3)+pow(z,3)
+            if s1==s2:
+                print(f"水仙花数有：{s1}")

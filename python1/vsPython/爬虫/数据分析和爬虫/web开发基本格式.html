@@ -1,0 +1,329 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>个人空间</title>
+        <style>
+            h1{
+               color:red;
+               font-size: 128px;
+               text-align: center;
+               margin: 50px;
+               padding-left: 20px;
+            }
+            p{
+               margin-left: 50px;
+            }
+            table{
+                margin-bottom: 50px;
+                border-collapse: collapse;
+            }
+            td{
+                border-bottom:  1px solid lightgray;
+                width: 150px;
+                text-align: center;            
+            }
+            th{
+                background-color: lightgray  ;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form action="(服务器url)" method="post" enctype="multipart/form-data">
+            <input type="file">
+            <input type="tel" #占位符 placeholder="手机号">
+            <div>
+                <input type="checkbox">
+            </div>
+            <p>
+                <label for="">密码</label>
+            <input type="password"  placeholder="密码">
+            </p>
+            <p>
+                <select name="" id="">
+                    <option 给服务器的值：value="">北京</option>
+                    <option value="">湖南</option>
+                    <option value="">湖北</option>
+                    <option value="">上海</option>
+                    <option value="">武汉</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="登录">
+            </p>
+            .....
+        </form>
+        <audio controls>
+            <source src="">
+        </audio>
+        <video>
+            <source src="">
+        </video>
+        <h3>冬天适合吃的水果有</h3>
+        <ul>
+            <li>苹果</li>
+            <li>榴莲</li>
+            <li>蓝莓</li>
+            <li>橙子</li>
+            <li>香蕉</li>
+        </ul>
+        <dl>
+            <dt>概率</dt>
+            <dd>概率又叫几率</dd>
+            <dd>概率通常取值在0-1之间</dd>
+        </dl>
+        <!--锚链接#foo-->
+        <a name = 'foo'></a>
+        <table >
+            
+            <tr>
+                <th>球队</th>
+                <th></th>
+                <th>1st</th>
+                <th>2nd</th>
+                <th>3rd</th>
+                <th>4th</th>
+                <th>总分</th>
+            </tr>
+            <tr>
+                <td>掘金</td>
+                <td></td>
+                <td>29</td>
+                <td>26</td>
+                <td>28</td>
+                <td>41</td>
+                <td>124</td>
+            </tr>
+            <tr>
+                <td>森林狼
+
+                </td>
+                <td></td>
+                <td>20</td>
+                <td>36</td>
+                <td>25</td>
+                <td>28</td>
+                <td>109</td>
+            </tr>
+        </table>
+        </table>
+        <img src="OIP-C.jpeg" width= '100' >
+        <img src="<img id="s_lg_img_new" class="s_lg_img_gold_showre" src="//www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" width="270" height="129" onerror="this.src='https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1-66368c33f8.png';this.onerror=null;" usemap="#mp" title="" cursor="default">" 
+        <a href="https://www.baidu.com">
+            <img src="<img id="s_lg_img_new" class="s_lg_img_gold_showre" src="//www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" width="270" height="129" onerror="this.src='https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1-66368c33f8.png';this.onerror=null;" usemap="#mp" title="" cursor="default">" 
+            百度一下</a>
+        <a href="https://www.cug.edu.cn" target = '_blank'>中国地质大学</a>
+        
+        <div>
+            <h1>静夜思</h1>
+            <h4>李白<h6>1</h6></h4>
+            <hr> 
+            <p>窗前<em>明月光</em></p>
+            <p>疑是地上霜</p>
+            <p>举头望明月</p>
+            <p>低头思故</p>
+            <button onclick="sayHello()">确定</button>
+        </div>
+        <a href="#foo">回顶部</a>
+        <script>
+            function sayHello(){
+                let name = window.prompt("请输入您的名字")
+                window.alert('你好,'+name+'!')
+                window.close()
+            }
+        </script>
+
+    </body>
+</html>
+#w3C  html参考文件
+HTML页面源代码由三样东西构成：
+    1，标签-数据（content-承载内容）
+    2。层叠样式表（CSS）-显示（display- 渲染页面)
+    3，Javascript(JS)- 行为-交互行为（behavior）
+标签：
+    文本
+        -div
+            h1-h6 : 标题
+            p ：段落
+            多段：div>p*4
+            sub/sup ： 上标/下标
+            em /strong ：强调
+    图像
+           img( scr = '(相对路径)', alt = '() 表示代替品';()) :只需要写开始标签
+    链接
+        -a：
+            -页面链接：href='' (target = "_blank")
+            -锚链接  （<a name="">)回到指定位置   
+            -功能链接 打开qq进行交谈，打开邮箱<a href="mailto:642717304@qq.com">联系我</a>
+    表格
+        -table
+            <tr>行
+            <td>列
+            <th>标题栏
+            创建多行：table>tr*3
+    列表
+        -ul - 无序列表
+        -ol - 有序列表
+        -dl - 定义列表
+    
+    音视频
+        -audio
+        -video
+        -form 表单 - 表单控件input
+
+PYthon 程序联网获取数据————requests
+    pip config set global.index-url https
+    pip install request 
+
+
+层叠样式表盒子模型
+    -每一个元素是一个盒子，盒子里面是内容，然后是内边距（padding，内容到边框的距离）
+    和边框border），除此之外，每个盒子还可以设置背景（background。背景图和背景色
+    盒子之间的距离叫做外边框（margin）
+
+
+.hd>a>span:first-child   获得span下第一个子标签
+.hd>a>span:nth-child(5)  获得第五个子标签
+
+python读写exce文件：
+    -openpyxl XML    xlsx(x就是储存在XML文件)
+    -   xlrd/xlwt
+    - xlwings
+
+    每个excel文件————工作簿————workbook
+    一个excel文件可以包含多个工作表————sheet————行和列
+    行和列交汇的地方叫做单元格————cell
+
+    步骤：
+    wb = xlwt.Workbook()
+    sheet = wb.add_sheet()
+    sheet.write(row ,col data)
+    wb.save()
+
+
+通过cookies 向网页发生请求
+        封ip的两种情况：
+        1、未登录无法访问，登录后即可访问：
+            在请求头中加入登录信息，cookie信息（保存在浏览器中，和用户相关的文件）
+        2、封全ip
+            ip代理
+
+让代理服务器帮我们向网站·发送请求，并返回数据
+
+API - Application program interface 网络编程接口
+
+            -->网络API接口 ———> url --> JSON --> dict --> 代理服务器的IP和端口
+        --> request.get(API接口) --> Response --> json() --> dict
+    -->  proxies = {'http': 'http://IP地址：端口'}
+
+短信服务：云片短信 网易易信 螺丝帽 
+
+并发编程：让程序有多个执行线索（同时进行）
+    --多线程--I/O密集型任务--CPython--GIL--无法使用多核特性
+    --多进程--计算密集型任务--使用多个cpu和多核特性--每个cpu高速运转    
+    --异步编程
+
+进程：运行1的程序通常包括一个或多个线程，线程是操作系统分配内存的基本单位
+线程：一个进程包括一个或多个线程，线程是操作系统分配cpu的基本单位
+
+单线程程序--只有一个执行线索-- 创建多个线程（并发部分）
+
+在编写多线程程序时，一定要注意线程的创捷和释放都有一定的开销，而且创建太多线程，线程之间的切换调度也有开销，所以线程不是
+越多越好，最好的办法是创建若  干线程，重复调用它们。
+
+线程池：创建一个容器，提前建立好若干线程，使用线程时从线程池调用，结束后不释放线程，而是放回容器，以重复使用
+
+装饰器是一个代理，它要执行被装饰的函数，还要添加额外功能
+装饰器就是一个函数，它可以装饰函数和别的类，所以他的参数通常是函数和类
+他的返回值是一个带有装饰功能的函数
+
+高阶函数：参数为函数，返回值也为函数
+
+多个线程竞争一个资源会造成异常：
+
+
+页面上的动态内容访问：（通过JavaScript代码动态生成的，显示网页源代码时看不见的内容）
+    方法一：javascript逆向-->找到真正提供数据的url
+        -通过浏览器开发者工具，查找提供数据的url
+        -通过专业的抓包工具，直接获取数据接口
+            -fiddler，charles，wireshark
+    方法二、通过python代码操作浏览器，直接拿到动态内容的页面，然后再提取数据--> selenim.webdriver
+
+
+编写爬虫程序的步骤：
+    1.抓取页面：requests/aiohttp/httpx
+    2.解析页面：
+        -正则表达式 -- re
+            -compile()--设置正则表达式模式
+            -match()/search()--开始匹配
+            -findall()/finditer() -- 
+        -css（层叠样式表）选择器 -- BeautifulSoup4/pyquery
+            -BeautifulSoup(url,'html.parser')
+                -select 选择标签
+                -select_one （text/attrs)
+        xpath--从XML文件中查询元素的语法
+            -xpath://*[@id="content"]/div/div[1]/ol/li[1]/div/div[2]/div[1]/a/span[1]
+            -fullxpath:/html/body/div[3]/div[1]/div/div[1]/ol/li[1]/div/div[2]/div[1]/a/span[1]
+            pip install lxml --> from lxml import etree
+            etree.HTML(url) --> 生成element文件
+             --->xpath('')
+    3.保存数据（持久化）
+        -csv逗号分隔值文件--csv --reader/writer(file)---writerow([...])
+        -Excel
+            -openpyxl
+            -Workbook（工作簿）
+                -->add_sheet()-->worksheet(工作表)-->write(row,column,data)
+                -->create_sheet()-->worksheet-->cell(row,column,data)
+                -->save('')
+        -数据库(database)
+            -关系型数据库（SQL）
+            -非关系型数据库（noSQL）--> newSQL
+    4.压缩和摘要(数据指纹)
+        -hashlib（哈希算法） --> MD5 /SHA1/SHA256 -->判断唯一性
+        zlib（压缩库） --> compress/decompress   #zilib.conpress(file)
+    
+    5.调度器（并发爬取）
+        -多线程（Threading）
+            -Thread（target,argument) --> start
+                -ThreadPoolExecutor(max_workers = ) --> submit(tool,args)
+                多个线程之间要通信，比较简单，线程可以共享进程的内存。而多进程之间通讯不便
+        -多进程（Mutiprocessing）
+            -Process(target,args) --> start()
+            多进程通信方法：
+                -管道（操作系统预留的IO接口）
+                -套接字（网络编程的接口）
+        --异步编程
+            -异步I/O -- 协作式并发 --> 协程
+            （aiohttp，httpx）
+                -同步：排队，形成顺序进行执行（阻塞和等待）-->执行效率低
+                -异步：不排队，没有顺序，（无阻塞和等待）
+
+                -迭代器：（iterator)
+                    实现了迭代器协议的对象（两个魔术方法：__iter__,__next__包含这两个方法的类为迭代器)
+                -生成器：(generator)
+                    迭代器的简单版
+                -协程：（
+
+动态内容的获取
+    -Javascript逆向-- > 找到真正提供数据的API接口 -- Response --> json() 
+        -浏览器开发者工具 --> network -- XHR(Javascript获取数据的异步请求)
+        -专业抓包工具 ——-> -fiddler，charles，wireshark
+    -直接操控浏览器
+        -selenium(浏览器插件seleniumIDE)
+            -webdriver
+                -pip install
+                -chrome driver 放在虚拟环境script（bin)中 ——- PATH环境变量
+                -from selenium import webdriver
+                browser = webdriver.chrome()
+                    ->get(url)
+                    ->page_source---页面-Xpath/CSS selector
+                    ->find_element_by_xpath/css_selector/name/id
+                    ->close()
+                    ->add_cookies({...})/delete_all_cookies/get_cookies()
+                    ->switch_to.window(browser.window.handle[])   #无头浏览器
+                    ->set_window_size()/ get_screenshot_as_file(..)
+                    
+
+无头浏览器
+    没有界面的浏览器
+反爬措施：

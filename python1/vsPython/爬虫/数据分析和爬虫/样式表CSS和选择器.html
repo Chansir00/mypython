@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS例子</title>
+        <!-- 内部样式表 -->
+        <!-- 外部样式表 -->
+        <style>
+
+            /* 通配符选择器 */
+            *{
+               
+                border: 1px solid black;
+                margin: 0;
+                padding: 50px; 
+                
+                /* 整个网页成为边框 */
+                /* 字到边框的距离 */
+            }
+
+            /* ID选择器 只作用一个元素 */
+            #he {
+                color: blue
+            }
+            .A{
+                color: green;
+                text-align:right
+            }
+            /* 父子选择器(仅下面一级的标签) */
+            .a>p{
+                color: red;
+            }
+                /* 后代选择器 */
+            .b p{
+                width: 320px;
+                margin-left: 20px;
+                color: purple;
+            }
+            .c{
+                clear: right;
+            
+            }
+            /* 兄弟选择器 */
+            h1~p{
+                size: 20px;
+                color: yellow;
+            }
+            /* 相邻兄弟选择器 */
+            h1+p{
+                text-decoration: underline;
+            }
+
+            /* 标签选择器 */
+            h1 {
+               color: red; 
+               text-align: center;
+               padding-left: 50px;
+               margin-top: 20px;
+            }
+            #login{
+                border: 1px dashed darkblue;
+                width: 249px;
+                height: 120px;
+                margin:auto
+            }
+        </style>
+    </head>
+    <body>
+        <form id = 'login' action="" method = 'post'>
+            <p>
+                <input type="tel" placeholder="手机号">
+            </p>
+            <p>
+                <input type="password" placeholder="密码">
+
+            </p>
+            <p>
+                <input type=" submit" value="登录">
+            </p>
+        </form>
+        div.a>*4:
+        <div class="a">
+            <p>白日依山尽</p>
+            <p>5黄河入海流</p>
+            <p>欲穷千里目</p>
+            <p>更上一层楼</p>
+            <div>
+                <p>Heloise</p>
+                <p>goodbye</p>
+            </div>
+        </div>
+        <div class="b">
+            <p>锄禾日当午</p>
+            <p>汗滴禾下土</p>
+            <p>谁知盘中餐</p>
+            <p>粒粒皆辛苦</p>
+            <div>
+                <p>杜甫</p>
+                <p>唐</p>
+            </div>
+        </div>
+        /* 内嵌样式表 */
+        <!-- 冲突的样式遵循具体性原则 -->
+        <h1 class="A">hello world</h1>    
+        <p>091223</p>
+        <h1 style="text-align :right"; class="A">goodbye</h1>
+        <h1 >你好世界</h1>
+        <p id = 'he'> 陈骏鑫</p>
+        <img src="C:\Users\64271\Desktop\vsPython\baidu.png" alt="">
+        <div>
+            <p class='c'>要看瀑布</p>
+        </div>
+    </body>
+</html>
+
+
+!直接制表
+id选择器冲突符合就近原则，后定义取代前定义
+层叠样式表盒子模型
+    -每一个元素是一个盒子，盒子里面是内容，然后是内边距（padding，内容到边框的距离）
+    和边框（broder），除此之外，每个盒子还可以设置背景（background。背景图和背景色
+    盒子之间的距离叫做外边框（margin）
+    层叠样式表盒子模型
+    -每一个元素是一个盒子，盒子里面是内容，然后是内边距（padding，内容到边框的距离）
+    和边框（broder），除此之外，每个盒子还可以设置背景（background。背景图和背景色
+    盒子之间的距离叫做外边框（margin）

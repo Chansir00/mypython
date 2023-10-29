@@ -1,0 +1,10 @@
+为什么要学习Javascript？
+    1.HTML定义网页的内容
+    2.CSS规定网页布局
+    3.Javascript对网页行为进行编程
+
+Javascript ——>  ECMScript(ES) 核心语法 
+        BOM（browser object model) 
+
+整个页面DOM（document object model）
+    -document.queryselector()

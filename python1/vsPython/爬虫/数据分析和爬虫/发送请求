@@ -1,0 +1,53 @@
+'''
+
+通过开放数据接口（获取数据）
+XML - eXtensible Markup Language
+
+<?xml version = '1.0' encoding = 'utf-8'?>
+<messege>
+    <messege language = 'en'>
+        <from>CHAN sit</from>
+        <to>李阳</to>
+        <content>你好</content>
+    </messege>
+</messege>
+JSON - JavaScript Object Notation
+{
+    messege:[
+        {from:'陈',to:'李',content:'你好'}，
+        {from:'刘'，to:}    
+    ]
+
+}
+
+YAML - Yet Another Markup Language
+messages:
+  message:
+    from:
+    to:
+    content:
+      message:
+'''
+
+#调用第三方网关发生信息
+
+import requests
+import random
+def send_message(tel,code):
+    res = requests.post(
+        url='',
+        auth= ('api','key),
+        data={
+            'mobile': tel,
+            'message':f''
+        },
+        timeout= 3)
+    return res.json()
+
+def get_mobile(lenth = 6):
+    return ''.join(random.choice('0123456789',k = lenth))
+
+if __name__=='__main__':
+    code = get_mobile()
+    print(code)
+    send_message('mobile number',code)

@@ -1,0 +1,56 @@
+import requests
+import bs4
+import xlwt
+#先建工作簿，工作表，单元格
+head = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54'}
+# 获取多个页面
+url = r'https://movie.douban.com/top250?start=0&filter='
+
+
+def movie_detail(movieurl): 
+    resp = requests.get(movieurl,headers=head)
+    soup = bs4.BeautifulSoup(resp.text,'html.parser')
+    genner_spans = soup.select('span[property="v:genre"]')
+    genger = '/'.join([i.text for i in genner_spans])
+    conutry_span = soup.select('span.pl')[4]
+    country = conutry_span.next_sibling.strip()
+    data_span = soup.select('span.pl')[6]
+    data = data_span.next_sibling.strip() 
+    languge_span = soup.select('span.pl')[5]
+    languge = languge_span.next_sibling.strip()
+    return genger,country,data,languge
+
+
+def main():
+    wb = xlwt.Workbook()   #创建工作簿
+    sheet = wb.add_sheet('豆瓣电源详情')  #创建工作表
+    rank = 0
+    ls = ['排名','类型','语言','作者','日期','评分']
+    for index1,name in enumerate(ls):
+        sheet.write(0,index1,name)   #写入单元格
+    resp = requests.get(url,headers=head)
+    soup = bs4.BeautifulSoup(resp.text,"html.parser")
+    info_divs = soup.select('div.info')
+    for info_div in info_divs:
+        rank += 1
+        anchor = info_div.select_one('div.hd>a')
+        detail_url = anchor.attrs['href']  #获取每一个电源的链接
+        title = anchor.select_one('span.title').text
+        score = info_div.select_one('div.bd>div.star>span.rating_num').text
+        moviedetail = [rank,title,score]
+        moviedetail += movie_detail(detail_url)
+        for index,item in enumerate(moviedetail):
+            sheet.write(rank,index,item)
+    wb.save('豆瓣电源.xls') 
+    print("执行完毕")
+    
+    
+if __name__ == '__main__':
+    main()
+
+# 获得title标签
+# spans = soup.select('#content > div > div.article > ol > li:nth-child(1) > div > div.pic > a')
+# 遍历打印出标签内容
+# 获得title标签
+# ('#content > div > div.article > ol > li:nth-child(1) > div > div.info > div.hd > a')
+# 遍历打印出标签内容

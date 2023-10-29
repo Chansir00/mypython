@@ -1,0 +1,12 @@
+count = 3                                 #三次机会
+password = '123456'                       #input输入为字符串
+while count:                              #当count为0时停止运行
+    passwd = input('请输入密码')
+    if passwd == password:
+        print('输入正确')
+        break
+    elif '*' in passwd:
+        print('密码中不能含有*')
+    else:
+        print('密码错误，请重试')
+        count -= 1

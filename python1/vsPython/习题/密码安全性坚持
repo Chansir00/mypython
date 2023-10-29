@@ -1,0 +1,44 @@
+
+symbols = r'''~!@#$%^&*()_+-=/{}[]\|'";:/?,.<>'''
+chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+nums = '0123456789'
+
+passwd = input('请输入密码')
+lenth = len(passwd)
+while (passwd.isspace()) or lenth  == 0:
+    passwd = input('您输入的密码为空，请重新输入')
+    lenth = len(passwd)
+
+if lenth < 8:
+     flag_len = 1
+elif 8 < lenth < 16:
+    flag_len = 2
+else:
+    flag_len = 3
+    
+flag_con = 0
+
+for each in passwd:
+    if each in symbols:
+        flag_con += 1
+        break
+    
+for each in passwd:
+    if each in chars:
+        flag_con += 1
+        break
+for each in passwd:
+    if each in nums:
+        flag_con += 1
+        break
+while 1:
+    print('您的密码安全级别为：',end='')
+    if flag_len == 1 or flag_con == 1:
+        print('低')
+        
+    elif flag_len == 3 and flag_con == 3 and (passwd[0] in chars):
+        print('高')
+    
+    else:
+        print('中')
+    break

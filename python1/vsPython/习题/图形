@@ -1,0 +1,22 @@
+#import easygui
+#easygui.msgbox('你好')
+
+from easygui import *
+msgbox('嗨')
+
+#import easygui as a
+#a.msgbox('Nih')
+# 导入easygui基本三种方法
+
+
+#msgbox使用方法
+#msgbox(msg='(message)',title='',ok_button='',image= None, root= None)
+msgbox('你好','中国地质大学','收到')
+
+#ccbox用法
+#ccbox(msg='',title='',choices=('',''),image=None,default_choice='',cancel_choice='')
+ccbox(msg='你好',title='中国地质大学',choices=('[y]收到','[n]拒绝'),image=None,default_choice='错误',cancel_choice='关闭')              # [y]和[n]表示快捷键
+
+#ynbox 用法
+#ynbox(msg='',title='',choices=('[<F1>],[<F2}]'))            #其余用法同上
+
